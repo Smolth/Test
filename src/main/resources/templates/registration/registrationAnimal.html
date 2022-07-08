@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration of animal</title>
+</head>
+<body backgroundcolor="#6495ed">
+<form role="form" th:method="POST" th:action="@{/auth/regAnimal/{owner}(owner = ${clientName})}">
+    <div class="form-group">
+
+        <label for="username">
+            Введите имя питомца
+        </label>
+        <input type="text" id="username" required name="name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="age">
+            Введите Дату Рождения питомца
+        </label>
+        <input required type="date" id="age" name="age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <select required class="form-control" name="sex" id="sex">
+            <option disabled>Выберите пол питомца</option>
+            <option value="женский">Женский</option>
+            <option value="мужской">Мужской</option>
+        </select>
+    </div>
+    <div class="form-group">
+
+        <label for="about">
+            Введите личные данные питомца
+        </label>
+        <textarea required id="about"  name="about" class="form-control"></textarea>
+
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Зарегистрировать питомца
+    </button>
+</form>
+</body>
+</html>

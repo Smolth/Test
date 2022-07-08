@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Card</title>
+</head>
+<body th:bgcolor="Lavender">
+<h1 th:align="center" th:text="${animal.getName()}">value</h1><br>
+<h1 th:align="center" th:text="${animal.getAge()}">value</h1><br>
+<h1 th:align="center" th:text="${animal.getSex()}">value</h1><br>
+<h1 th:align="center" th:text="${animal.getAbout()}">value</h1>
+<br><br>
+<p><a th:href="@{/auth/delAnimal/{animalNumber}(animalNumber = ${animal.getAnimalNumber()})}">Удалить питомца</a></p>
+<p><a th:href="@{/auth/editAnimal/{animalNumber}(animalNumber = ${animal.getAnimalNumber()})}">Редактировать питомца</a></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration of client</title>
+</head>
+<body backgroundcolor="#4169e1">
+<form role="form" th:method="POST" th:action="@{/addClient}" th:object="${client}">
+    <div class="form-group">
+        <label for="clientName">
+            Username
+        </label>
+        <input required type="text" id="clientName" th:field="*{name}" name="clientName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="password">
+            Password
+        </label>
+        <input required type="password" class="form-control" th:field="*{password}" name="password" id="password" />
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Ready
+    </button>
+</form>
+</body>
+</html>

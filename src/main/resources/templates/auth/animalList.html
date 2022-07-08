@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My pets</title>
+</head>
+<body backgroundcolor="#5f9ea0">
+<div th:each="animal : ${animals}">
+    <a th:href="@{/auth/animal/{animalNumber}(animalNumber=${animal.getAnimalNumber()})}" th:text="${animal.getName()}"> head </a>
+</div>
+</body>
+</html>

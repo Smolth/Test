@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+</head>
+<body backgroundcolor="#663399">
+<h1 th:text="'Добро пожаловать, ' + ${client.getClientName()}"/>
+<h1 th:text="'Выберите операцию'"/>
+<p><a th:href="@{/auth/regAnimal/{owner}(owner = ${client.getClientName()})}">Добавить питомца </a></p>
+<p><a th:href="@{/auth/animalList/{owner}(owner = ${client.getClientName()})}">Поcмотреть список питомцев.</a></p>
+</body>
+</html>
